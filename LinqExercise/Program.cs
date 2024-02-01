@@ -58,7 +58,7 @@ namespace LinqExercise
 
             //TODO: Print all the employees' FullName properties to the console only if their FirstName starts with a C OR an S and order this in ascending order by FirstName.
             Console.WriteLine("Employees' whose name starts with \"C\" or \"S\".");
-            employees.Where(x => x.FirstName.StartsWith("C") || x.FirstName.StartsWith( "S")).ToList().ForEach(x => Console.WriteLine(x.FullName));
+            employees.Where(x => x.FirstName.StartsWith("C") || x.FirstName.StartsWith( "S")).OrderBy(x=>x.FirstName).ToList().ForEach(x => Console.WriteLine(x.FullName));
             //TODO: Print all the employees' FullName and Age who are over the age 26 to the console and order this by Age first and then by FirstName in the same result.
             employees.Where(x => x.Age > 26).OrderBy(x => x.Age).OrderBy(x => x.FirstName).ToList().ForEach(x => Console.WriteLine($"Full name and age : {x.FullName}, {x.Age}."));
             //TODO: Print the Sum of the employees' YearsOfExperience if their YOE is less than or equal to 10 AND Age is greater than 35.
