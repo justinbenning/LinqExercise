@@ -49,6 +49,9 @@ namespace LinqExercise
             Console.WriteLine("First 4 numbers");
             numbers.OrderBy(x => x).Take(4).ToList().ForEach(x => Console.WriteLine(x));
             //TODO: Change the value at index 4 to your age, then print the numbers in descending order
+            Console.WriteLine("Insert Age")
+            numbers.SetValue(35, 4);
+            numbers.OrderByDescending(x => x).ToList().ForEach(x => Console.WriteLine(x));
 
             // List of employees ****Do not remove this****
             var employees = CreateEmployees();
